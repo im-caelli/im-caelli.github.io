@@ -9,6 +9,7 @@ module.exports = {
   siteMetadata: {
     title: 'im-caelli.github.io',
     author: 'Caelli',
+    email: 'im.caelli@gmail.com',
     twitter: 'https://twitter.com/im_caelli',
     tumblr: 'https://im-caelli.tumblr.com/',
     instagram: 'https://www.instagram.com/im.caelli/',
