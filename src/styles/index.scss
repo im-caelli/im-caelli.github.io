@@ -23,8 +23,6 @@ h4 {
 @tailwind utilities;
 
 @import './_variables.scss';
-// @import './_mixin.scss';
-// @import './_utilities.scss';
 
 
 // Generic
@@ -47,7 +45,7 @@ body {
 // Global
 footer {
     a {
-        color: map-get($map: $theme-colors, $key: 'primary');
+        color: theme('colors.primary');
         &:hover {
             opacity: 0.75;
         }
@@ -59,3 +57,59 @@ footer {
         }
     }
 }
+
+
+// Navigation
+
+.nav {
+    width:300px;
+    height:100%;
+    position: absolute;
+    top:0;
+    left:0;
+    @apply z-50;
+    @apply text-gray-200;
+
+    &-wrap {
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &-action {
+        // position: absolute;
+        // right:-2rem;
+        font-size: 1.25rem;
+
+
+        ul {
+            position: relative;
+            height: 100%;
+            
+            li {
+                a {
+                    display: block;
+                    padding: 1rem;
+                    @apply bg-gray-800;
+
+                    &:hover, &:active, &.active {
+                        @apply bg-gray-900;
+                    }
+                }
+
+                &.btt {
+                    position: absolute;
+                    bottom: 4.5rem;
+                }
+            }
+        }
+    }
+
+    &-modal {
+        flex: 1;
+        @apply bg-gray-900;
+    }
+}
+
