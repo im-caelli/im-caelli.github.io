@@ -46,9 +46,9 @@ const Menu = () => {
                         </ul>
                     </nav>
 
-                    <div className="work-context">
+                    {/* <div className="work-context">
                         <p>Work Context</p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

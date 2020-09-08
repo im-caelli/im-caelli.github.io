@@ -1,8 +1,9 @@
-# 2020-06-27
+# Notes
 
 ## Basics
 
 - [ ] Brand
+  - [ ] Font and Colors
 - [ ] About
 
 
@@ -15,7 +16,6 @@
 - [ ] Parallax images in story
 - [ ] Modals - Warnings
 - [ ] Share links
-- [ ] 
 
 
 ## Technical
