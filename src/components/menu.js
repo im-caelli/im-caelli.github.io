@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import { FaBars, FaShareAlt, FaMoon, FaChevronUp, FaTimes } from 'react-icons/fa';
+
 
 const Menu = () => {
     const data = useStaticQuery(graphql `
@@ -19,12 +20,53 @@ const Menu = () => {
         }
     `)
 
+    // Nav
+    const [ open, setOpen ] = useState(false)
+    
+
+    let navToggle = open ? "show" : ""
+    let navIcon = open ?  <FaTimes title="Close Menu"/> : <FaBars title="Open Menu"/>
+    
+    useEffect(() => {
+        const clickHandler = ({ target }) => {
+          const container = document.getElementById(`nav`);
+          if (container.contains(target)) return;
+          setOpen(false);
+        };
+    
+        document.addEventListener("click", clickHandler);
+    
+        // these functions clean up the event listeners
+        return () => document.removeEventListener("click", clickHandler);
+      });
+
+    useEffect(() => {
+        const keyHandler = ({ keyCode }) => {
+            if (keyCode !== 27) return;
+            setOpen(false);
+        };
+        document.addEventListener("keydown", keyHandler);
+
+        return () => document.removeEventListener("keydown", keyHandler);
+    });
+    
+
     return (
-        <div className="nav">
+        <div id="nav" className={"nav " + navToggle } aria-modal="true" role="dialog" aria-labelledby="nav-modal-label">
+            <div tabindex="0"></div>
             <div className="nav-wrap">
                 <nav className="nav-action" aria-labelledby="Action Links">
                     <ul>
-                        <li><a href="#" role="button"><FaBars title="Menu"/> <span className="sr-only">Menu</span></a> </li>
+                        <li>
+                            <a 
+                            href="#" 
+                            role="button"
+                            onClick={ () => setOpen(!open) }
+                            aria-expanded={open === true ? "true" : "false"}
+                            className={open === true ? "active" : ""} >               
+                                {navIcon}<span className="sr-only">Toggle Menu</span>
+                            </a>
+                        </li>
                         <li><a href="#" role="button"><FaShareAlt title="Share"/> <span className="sr-only">Share</span></a> </li>
                         <li><a href="#" role="button"><FaMoon title="Dark Mode"/> <span className="sr-only">Dark Mode</span></a> </li>
                         {/* <li>
@@ -37,7 +79,7 @@ const Menu = () => {
                 </nav>
 
                 <div className="nav-modal">
-                    <h2>Menu</h2>
+                    <h2 id="nav-modal-label">Menu</h2>
                     <nav className="nav-menu" aria-labelledby="Site Menu">
                         <ul>
                             <li><Link to="/contact">Home</Link></li>
@@ -51,6 +93,7 @@ const Menu = () => {
                     </div> */}
                 </div>
             </div>
+            <div tabindex="0"></div>
         </div>
     )
 }

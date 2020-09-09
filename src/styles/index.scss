@@ -58,6 +58,11 @@ footer {
     }
 }
 
+// Utility
+
+a[role="button"] svg, .btn svg, button svg {
+    pointer-events: none;
+  }
 
 // Navigation
 
@@ -66,9 +71,14 @@ footer {
     height:100%;
     position: absolute;
     top:0;
-    left:0;
+    left:-248px;
+    transition: left .25s ease-in-out;
     @apply z-50;
     @apply text-gray-200;
+
+    &.show {
+        left:0;
+    }
 
     &-wrap {
         position: relative;

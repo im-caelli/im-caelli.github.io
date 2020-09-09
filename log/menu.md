@@ -3,11 +3,14 @@
 - [x] Design
   - [x] Positioning
   - [x] Colors
-  - [ ] Feedback
-- [ ] Off Canvas Slide
-  - [ ] Functionality
+  - [x] Feedback
+- [x] Off Canvas Slide
+  - [x] Functionality
   - [ ] Bars animate to cross/times icon
-  - [ ] Active color
+  - [x] Close when clicked outside
+  - [ ] Modal Warnings
+  - [ ] Tab focus
+  - [x] Active color
 - [ ] Share Link
   - [ ] Modal, copy page url to clip board
 - [ ] Dark Mode

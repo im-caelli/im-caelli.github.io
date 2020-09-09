@@ -30,3 +30,5 @@
 
 
 - [ ] Navigation and pagination.
+
+- [ ] Modal warnings

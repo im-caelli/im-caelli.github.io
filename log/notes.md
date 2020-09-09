@@ -16,10 +16,14 @@
 - [ ] Parallax images in story
 - [ ] Modals - Warnings
 - [ ] Share links
-
+- [ ] SEO
+  - [x] Meta Data 
+  - [ ] Social Cards
+    - [ ] TWITTER
+  - [x] Analytics
 
 ## Technical
 
 - [x] Gatsby
 - [x] Tailwind CSS
-  - Installed and Configured
+  - Installed and Configured~

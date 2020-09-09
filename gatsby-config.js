@@ -8,15 +8,25 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: 'im-caelli.github.io',
+    siteURL: 'https://im-caelli.github.io',
+    description: 'Caelli\'s Fan Work Dumpster.',
+    keywords: 'Caelli, im-caelli, im.caelli, im_caelli, Fanart, Fanfiction, Fandom, Korrasami',
     author: 'Caelli',
     email: 'im.caelli@gmail.com',
     twitter: 'https://twitter.com/im_caelli',
     tumblr: 'https://im-caelli.tumblr.com/',
     instagram: 'https://www.instagram.com/im.caelli/',
     ao3: 'https://archiveofourown.org/users/im_caelli',
+    // kofi: '',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-177508404-1",
+      },
+    },
     {
       resolve: `gatsby-plugin-sass`,
       options: {

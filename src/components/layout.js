@@ -9,9 +9,7 @@ const Layout = (props) => {
         <div className="gatsby-app">
             <Header />
             <div className="main bg-blue-200 flex-1">
-                <div className="content p-8 my-8 container bg-white">
-                    {props.children}
-                </div>
+                {props.children}
             </div>
             <Footer />
         </div>

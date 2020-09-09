@@ -20,7 +20,11 @@
   - [ ] Contextual Info
   - [ ] Moods
   - [ ] Anchors
-
+- [ ] Sections
+  - [ ] Hero
+  - [ ] Works
+    - [ ] Components
+      - [ ] Work Cards
 
 ## Works
 
