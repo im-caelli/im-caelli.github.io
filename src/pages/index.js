@@ -2,25 +2,57 @@ import React from "react"
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-// import Head from '../components/head'
 import SEO from '../components/seo'
-import Content from "../components/content"
 import Hero from "../components/hero"
+import Works from "../components/works"
+import Cards from "../components/cards"
 
 const IndexPage = () => {
   return (
     <Layout>
-      {/* <Head title="Home"/> */}
       <SEO title="Home" />
       <Hero>
-        <h1>Test Hero</h1>
+        <h2 className="hero-title">Hi, I'm Caelli</h2>
+        <p className="hero-tagline">Just a nerd who sometimes draws and writes to cope with fandom feels. This is the dumpster for embarrassing trash fan works I've created.</p>
+        <Link to="/about" className="btn btn-neutral">More About Me</Link>
       </Hero>
-      <Content>
-        <h1>Hello</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor eget felis porttitor volutpat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
-        <p><a href="/contact">Contact Me</a></p>
-        <p><Link to="/contact">Contact Me</Link></p>
-      </Content>
+      <Works>
+        <Cards 
+          title="Test Title" 
+          post="/about"
+          summary="Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem." 
+          cover="https://via.placeholder.com/750x400" 
+          fandom="The Legend of Korra" 
+          ship="Korrasami" 
+          rating="Mature" />
+
+        <Cards 
+          title="Test Title" 
+          post="/about"
+          summary="Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem." 
+          cover="https://via.placeholder.com/750x400" 
+          fandom="The Legend of Korra" 
+          ship="Korrasami" 
+          rating="Mature" />
+
+        <Cards 
+          title="Test Title"
+          post="/about" 
+          summary="Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem." 
+          cover="https://via.placeholder.com/750x400" 
+          fandom="The Legend of Korra" 
+          ship="Korrasami" 
+          rating="Mature" />
+
+        <Cards 
+          title="Test Title" 
+          post="/about"
+          summary="Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem." 
+          cover="https://via.placeholder.com/750x400" 
+          fandom="The Legend of Korra" 
+          ship="Korrasami" 
+          rating="Mature" />
+      </Works>
     </Layout>
   )
 }

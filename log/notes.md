@@ -4,7 +4,7 @@
 
 - [ ] Brand
   - [ ] Font and Colors
-- [ ] About
+- [x] About
 
 
 

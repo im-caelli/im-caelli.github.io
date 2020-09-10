@@ -15,8 +15,8 @@ const Header = () => {
     `)
 
     return (
-        <header className="bg-gray-800 p-4">
-            <h1 className="text-gray-200 text-right"> <Link to="/">{data.site.siteMetadata.title}</Link></h1>
+        <header className="bg-gray-800 p-2">
+            <h1 className="text-gray-200 text-right" class="sr-only"> <Link to="/">{data.site.siteMetadata.title}</Link></h1>
             <Menu />
         </header>
     )

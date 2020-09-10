@@ -1,24 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import { FaBars, FaShareAlt, FaMoon, FaChevronUp, FaTimes } from 'react-icons/fa';
 
 
 const Menu = () => {
-    const data = useStaticQuery(graphql `
-        query {
-            site {
-                siteMetadata {
-                    title
-                    author
-                    email
-                    twitter
-                    tumblr
-                    instagram
-                    ao3
-                }
-            }
-        }
-    `)
 
     // Nav
     const [ open, setOpen ] = useState(false)
@@ -53,7 +38,6 @@ const Menu = () => {
 
     return (
         <div id="nav" className={"nav " + navToggle } aria-modal="true" role="dialog" aria-labelledby="nav-modal-label">
-            <div tabindex="0"></div>
             <div className="nav-wrap">
                 <nav className="nav-action" aria-labelledby="Action Links">
                     <ul>
@@ -82,8 +66,8 @@ const Menu = () => {
                     <h2 id="nav-modal-label">Menu</h2>
                     <nav className="nav-menu" aria-labelledby="Site Menu">
                         <ul>
-                            <li><Link to="/contact">Home</Link></li>
-                            <li><Link to="/works">Works</Link></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/#works">Works</Link></li>
                             <li><Link to="/about">About</Link></li>
                         </ul>
                     </nav>
@@ -93,7 +77,6 @@ const Menu = () => {
                     </div> */}
                 </div>
             </div>
-            <div tabindex="0"></div>
         </div>
     )
 }

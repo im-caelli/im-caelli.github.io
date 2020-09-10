@@ -17,6 +17,8 @@ module.exports = {
     tumblr: 'https://im-caelli.tumblr.com/',
     instagram: 'https://www.instagram.com/im.caelli/',
     ao3: 'https://archiveofourown.org/users/im_caelli',
+    reddit: 'https://www.reddit.com/user/im-caelli',
+    github: 'https://github.com/im-caelli',
     // kofi: '',
   },
   plugins: [

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import { FaTwitter, FaTumblr, FaInstagram, FaBook } from 'react-icons/fa';
+import { FaTwitter, FaTumblr, FaInstagram, FaBook, FaGithub, FaRedditAlien } from 'react-icons/fa';
 
 const Footer = () => {
     const data = useStaticQuery(graphql `
@@ -13,6 +13,8 @@ const Footer = () => {
                     twitter
                     tumblr
                     instagram
+                    reddit
+                    github
                     ao3
                 }
             }
@@ -27,6 +29,8 @@ const Footer = () => {
                     <li><a href={data.site.siteMetadata.twitter} target="_blank" rel="noreferrer"><FaTwitter title="Twitter"/> <span className="sr-only">Twitter</span></a> </li>
                     <li><a href={data.site.siteMetadata.tumblr} target="_blank" rel="noreferrer"><FaTumblr title="Tumblr"/> <span className="sr-only">Tumblr</span></a> </li>
                     <li><a href={data.site.siteMetadata.instagram} target="_blank" rel="noreferrer"><FaInstagram title="Instagram"/> <span className="sr-only">Instagram</span></a> </li>
+                    <li><a href={data.site.siteMetadata.reddit} target="_blank" rel="noreferrer"><FaRedditAlien title="Reddit"/> <span className="sr-only">Reddit</span></a> </li>
+                    <li><a href={data.site.siteMetadata.github} target="_blank" rel="noreferrer"><FaGithub title="Github"/> <span className="sr-only">Github</span></a> </li>
                     <li><a href={data.site.siteMetadata.ao3} target="_blank" rel="noreferrer"><FaBook title="Archive of our Own"/> <span className="sr-only">Archive of Our Own</span></a> </li>
                 </ul>
             </div>

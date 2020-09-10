@@ -3,16 +3,16 @@
 
 ## About 
 
-- [ ] About Me
-  - [ ] Blurb
-    - [ ] Dev
-    - [ ] Art
-    - [ ] Write
-  - [ ] Socials
-    - [ ] Twitter
-    - [ ] Tumblr
-    - [ ] AO3
-    - [ ] Instagram
+- [x] About Me
+  - [x] Blurb
+    - [x] Dev
+    - [x] Art
+    - [x] Write
+  - [x] Socials
+    - [x] Twitter
+    - [x] Tumblr
+    - [x] AO3
+    - [x] Instagram
   - [ ] Kofi
 - [ ] About Site
   - [ ] Dark Mode
