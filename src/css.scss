@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap');
+
+$primary: #024959;
+$secondary:#027373;
+$accent: #F2B999;
+$m-accent: #F2B705;
+$d-accent:#F29F05;
+$l-gray: #F2F2F3;
+$m-gray: #C8CDD0;
+$d-gray: #415058;
+$dark: #1F292E;
+
+html,
+body {
+  height:100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: $primary;
+
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: $secondary;
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+.btn {
+  &-primary {
+    background-color: $d-accent;
+    border-color: $d-accent;
+    color: $dark;
+
+    &:hover {
+      background-color: $accent;
+      border-color: $accent;
+      color: $dark;
+    }
+  }
+}
+
+.container {
+  background: $m-gray;
+  color: $dark;
+  box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
+  padding: 0;
+}
+
+.intro {
+  background-color: $secondary;
+  padding: 1rem;
+  color: $l-gray;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // text-align: center;
+
+  // & > div {
+  //   margin: 2rem auto;
+  //   width: 75%;
+  // }
+
+  & > div {
+    text-align: center;
+    margin: 1rem auto;
+  }
+}
+
+.links, .socials {
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    li {
+      margin:0 1rem;
+    }
+    
+  }
+}
+
+.socials {
+  a {
+    display: block;
+    padding: .5rem;
+    font-size: 2rem;
+  }
+}
+
+.kofi {
+
+  a {
+    display: inline-block;
+    margin: .5rem 0;
+  }
+}
