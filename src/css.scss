@@ -56,7 +56,7 @@ body {
   
   &-header {
     background-color: $tertiary;
-    padding: 1rem;
+    padding: 1rem 1rem 1.5rem 1rem;
     color: $l-gray;
     display: flex;
     flex-direction: column;
@@ -66,6 +66,24 @@ body {
     h1 {
       font-size: 2rem;
       margin: 0;
+    }
+  }
+
+  &-avatar {
+    width: 60px;
+    height: 60px;
+    background-position: center;
+    background-size: 60px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: -25px;
+    position: relative;
+    border: 3px solid $l-gray;
+    background-color: $l-gray;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
     }
   }
 
@@ -99,7 +117,7 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
 
     li {
       margin: 0 .5rem;
@@ -165,7 +183,7 @@ body {
 
 .kofi {
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
 
   a {
     display: inline-block;
