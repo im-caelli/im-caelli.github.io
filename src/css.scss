@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&display=swap');
 
-$primary: #024959;
-$secondary:#027373;
-$accent: #F2B999;
-$m-accent: #F2B705;
-$d-accent:#F29F05;
+$primary: #4B37AB;
+$secondary:#FBAB7E;
+$tertiary:#17698C; //#24B9FA;
+$accent: #F7CE68;
+$accent-b: #5992AB;
+$warning: #EDB95E;
 $l-gray: #F2F2F3;
 $m-gray: #C8CDD0;
 $d-gray: #415058;
 $dark: #1F292E;
+
+$gradient: linear-gradient(223deg, $primary 0%, $accent 100%);
 
 html,
 body {
@@ -20,94 +23,159 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  background: $primary;
-
-  font-family: 'Nunito', Arial, Helvetica, sans-serif;
-}
-
-a {
-  color: $secondary;
-  &:hover {
-    color: $primary;
-    text-decoration: none;
-  }
-}
-
-.btn {
-  &-primary {
-    background-color: $d-accent;
-    border-color: $d-accent;
-    color: $dark;
-
-    &:hover {
-      background-color: $accent;
-      border-color: $accent;
-      color: $dark;
-    }
-  }
-}
-
-.container {
-  background: $m-gray;
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, $secondary 0%, $accent 100%);
   color: $dark;
-  box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.5);
-  padding: 0;
+  font-family: 'Nunito', Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
-.intro {
-  background-color: $secondary;
-  padding: 1rem;
-  color: $l-gray;
-  text-align: center;
-}
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // text-align: center;
+.block {
+  width:100%;
+  margin: auto;
+  max-width: 400px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+  0 2px 2px rgba(0,0,0,0.12), 
+  0 4px 4px rgba(0,0,0,0.12), 
+  0 8px 8px rgba(0,0,0,0.12),
+  0 16px 16px rgba(0,0,0,0.12);
+  border-radius: 0;
+  background-color: $l-gray;
+  position: relative;
 
-  // & > div {
-  //   margin: 2rem auto;
-  //   width: 75%;
-  // }
-
-  & > div {
-    text-align: center;
-    margin: 1rem auto;
+  &::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-shadow: 0rem 2.25rem 5rem 0rem rgba(darken($secondary, 10%),1);
+    z-index: -1;
   }
-}
-
-.links, .socials {
-  ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-
+  
+  &-header {
+    background-color: $tertiary;
+    padding: 1rem;
+    color: $l-gray;
     display: flex;
-    align-self: center;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 
-    li {
-      margin:0 1rem;
+    h1 {
+      font-size: 2rem;
+      margin: 0;
     }
-    
+  }
+
+  // Socials
+
+  &-social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: .5rem;
+
+    li {
+      a {
+        display: block;
+        padding: .5rem 1rem;
+        color: $l-gray;
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  // Links
+
+  &-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    li {
+      margin: 0 .5rem;
+
+      a {
+        display: block;
+        padding: .5rem;
+        border-radius: 5px;
+        color: $l-gray;
+        background-color: $accent-b;
+        text-transform: uppercase;
+        font-size: 12px;
+
+        &:hover,&:focus, &:active {
+          text-decoration: none;
+          background-color: $d-gray;
+        }
+      }
+    }
+  }
+
+  // Projects
+  
+  &-project {
+
+    h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+    }
+
+    p {
+      text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);
+    }
+    .carousel {
+      width: 100%;
+      height: 300px;
+
+      &-item {
+        width: 100%;
+        height: 300px;
+        a {
+          display: block;
+        }
+        img {
+          width: 100%;  
+          height: 300px;
+          object-fit: cover;
+        }
+      }
+    }
   }
 }
 
-.socials {
-  a {
-    display: block;
-    padding: .5rem;
-    font-size: 2rem;
-  }
-}
+// Kofi
 
 .kofi {
+  text-align: center;
+  padding: 2rem;
 
   a {
     display: inline-block;
-    margin: .5rem 0;
+
+    &:hover {
+      opacity: .9;
+    }
+
+    img {
+      height: 30px;
+    }
   }
 }
